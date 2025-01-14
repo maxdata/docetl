@@ -5,8 +5,6 @@ import os
 import aiohttp
 from pathlib import Path
 from urllib.parse import urljoin
-from azure.ai.documentintelligence.models import AnalyzeDocumentRequest, AnalyzeResult, DocumentContentFormat
-from azure.ai.documentintelligence import DocumentIntelligenceClient
 from azure.core.credentials import AzureKeyCredential
 import asyncio
 from concurrent.futures import ThreadPoolExecutor
@@ -17,6 +15,9 @@ from docling.datamodel.base_models import InputFormat
 from docling.document_converter import DocumentConverter, PdfFormatOption
 from docling.datamodel.pipeline_options import PdfPipelineOptions
 from docling.backend.pypdfium2_backend import PyPdfiumDocumentBackend
+
+# from azure.ai.documentintelligence.models import AnalyzeDocumentRequest, AnalyzeResult, DocumentContentFormat
+# from azure.ai.documentintelligence import DocumentIntelligenceClient
 
 # Load environment variables
 load_dotenv()

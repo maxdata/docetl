@@ -11,6 +11,8 @@
             "type": "node",
             "request": "launch",
             "runtimeExecutable": "/opt/homebrew/opt/node@20/bin/node",
+            "program": "${workspaceFolder}/website/node_modules/next/dist/bin/next",
+            "args": ["dev"],
             "cwd": "${workspaceFolder}/website",
             "console": "integratedTerminal",
             "serverReadyAction": {
