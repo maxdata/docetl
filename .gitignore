@@ -22,6 +22,7 @@ website/node_modules
 website/.pnp
 website/.pnp.js
 website/.yarn/install-state.gz
+website/.yarn/
 
 # testing
 website/coverage

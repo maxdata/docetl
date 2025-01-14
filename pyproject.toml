@@ -13,6 +13,7 @@ exclude = ["website/**/*"]
 docetl = "docetl.cli:app"
 
 [tool.poetry.dependencies]
+torch = "^2.2.2"
 python = "^3.10"
 tqdm = "^4.66.4"
 rich = "^13.7.1"
@@ -35,11 +36,12 @@ fastapi = { version = "^0.115.0", optional = true }
 uvicorn = { version = "^0.31.0", optional = true }
 websockets = "^13.1"
 docling = { version  = "^2.5.2", optional = true }
-azure-ai-formrecognizer = { version = "^3.3.3", optional = true }
 lzstring = "^1.0.4"
+azure-ai-formrecognizer = { version = "^3.3.3", optional = true }
 azure-ai-documentintelligence = { version = "^1.0.0b4", optional = true }
 litellm = "^1.51.0"
 pydantic = "^2.9.2"
+
 
 [tool.poetry.extras]
 parsing = ["python-docx", "openpyxl", "pydub", "python-pptx", "azure-ai-documentintelligence", "paddlepaddle", "pymupdf"]
