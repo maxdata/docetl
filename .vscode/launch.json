@@ -40,6 +40,16 @@
             ],            
             "justMyCode": true,
         },     
+
+        {
+            "name": "Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "tests.basic.test_basic_filter_split_gather",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "justMyCode": true
+        },
     ],
     "compounds": [
         {

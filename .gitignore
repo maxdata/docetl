@@ -16,6 +16,7 @@ workloads/*
 *ruff_cache*
 motion-old*
 venv/
+.yarn/
 
 # dependencies
 website/node_modules

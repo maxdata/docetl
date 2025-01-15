@@ -1,9 +1,7 @@
 # ruff: noqa: F811
 
-import pytest
 from docetl.operations.map import ParallelMapOperation
 from dotenv import load_dotenv
-from typing import Dict, Any, List, Tuple
 from tests.conftest import (
     parallel_map_config as parallel_map_config,
     parallel_map_sample_data as parallel_map_sample_data,

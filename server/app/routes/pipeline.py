@@ -1,7 +1,6 @@
 from typing import Any, Dict, List, Optional
 import uuid
 from fastapi import APIRouter, HTTPException, WebSocket, WebSocketDisconnect
-from docetl.runner import DSLRunner
 import asyncio
 from asyncio import Task
 from rich.logging import RichHandler
@@ -9,6 +8,8 @@ import logging
 from datetime import datetime, timedelta
 from enum import Enum
 from server.app.models import OptimizeResult, TaskStatus, OptimizeRequest, PipelineRequest
+
+from docetl.runner import DSLRunner
 
 # Setup logging
 FORMAT = "%(message)s"
