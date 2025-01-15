@@ -78,12 +78,12 @@ def sample_data_file(tmp_path):
 def test_end_to_end_pipeline(config_file, sample_data_file, tmp_path):
     # Update the config with the correct sample data path
     config = load_config(config_file)
-    config["datasets"]["sample_dataset"]["path"] = str(sample_data_file)
-    config["pipeline"]["output"]["path"] = str(tmp_path / "output.json")
+    # config["datasets"]["sample_dataset"]["path"] = str(sample_data_file)
+    # config["pipeline"]["output"]["path"] = str(tmp_path / "output.json")
 
     # Write the updated config back to the file
-    with open(config_file, "w") as f:
-        yaml.dump(config, f)
+    # with open(config_file, "w") as f:
+    #     yaml.dump(config, f)
 
     # Create and run the DSLRunner
     runner = DSLRunner.from_yaml(str(config_file))
@@ -111,3 +111,11 @@ def test_end_to_end_pipeline(config_file, sample_data_file, tmp_path):
 
     print(f"Pipeline executed successfully. Total cost: ${total_cost:.2f}")
     print(f"Output: {output_data}")
+
+
+
+if __name__ == "__main__":
+    config_file = "tests/youtube/youtube_extraction_pipeline.yaml"
+    sample_data_file = "tests/youtube/video_ids.json"
+    tmp_path = "tests/youtube/tmp"
+    test_end_to_end_pipeline(config_file, sample_data_file, tmp_path)
