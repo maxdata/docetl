@@ -7,7 +7,6 @@ from docetl.runner import DSLRunner
 from docetl.operations.split import SplitOperation
 from docetl.operations.map import MapOperation
 from docetl.operations.gather import GatherOperation
-from tests.conftest import api_wrapper
 
 
 def generate_random_content(length):
@@ -38,7 +37,6 @@ def generate_random_content(length):
     return " ".join(random.choices(words, k=length))
 
 
-@pytest.fixture
 def sample_data():
     documents = []
     for i in range(5):
@@ -55,7 +53,6 @@ def sample_data():
     return documents
 
 
-@pytest.fixture
 def config_yaml(sample_data):
     with tempfile.NamedTemporaryFile(
         mode="w+", suffix=".yaml", delete=False
@@ -165,10 +162,10 @@ def test_synth_gather(config_yaml):
 
 
 # # Run the test
-# if __name__ == "__main__":
-#     sd = sample_data()
-#     config = config_yaml(sd)
-#     test_synth_gather(config)
+if __name__ == "__main__":
+    sd = sample_data()
+    config = config_yaml(sd)
+    test_synth_gather(config)
 
 
 def test_split_map_gather(sample_data, api_wrapper):

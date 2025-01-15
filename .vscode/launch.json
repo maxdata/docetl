@@ -45,7 +45,7 @@
             "name": "Current File",
             "type": "debugpy",
             "request": "launch",
-            "module": "tests.youtube.run_youtube",
+            "module": "tests.test_synth_gather",
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}",
             "justMyCode": true
